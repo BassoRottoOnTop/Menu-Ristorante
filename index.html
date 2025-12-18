@@ -1,0 +1,186 @@
+
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+
+        .accordion-section {
+            width: 320px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+
+        .accordion-section input {
+            display: none;
+        }
+
+        .accordion-section label {
+            display: block;
+            padding: 18px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-section label:hover {
+            background-color: #e0554f;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background-color: #fff8f7;
+        }
+
+        .accordion-section input:checked ~ .accordion-content {
+            max-height: 1000px; 
+            transition: max-height 0.5s ease;
+        }
+
+        .tm-list-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tm-list-item:last-child {
+            border-bottom: none;
+        }
+
+        .tm-list-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .tm-list-item-name {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .tm-list-item-description {
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="accordion-section">
+        <input type="checkbox" id="pizze">
+        <label for="pizze">Pizze</label>
+        <div class="accordion-content">
+            <div class="tm-list-item">
+                <img src="img/margherita.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Margherita <span>$5.00</span></div>
+                    <div class="tm-list-item-description">Pomodoro fresco, mozzarella e basilico.</div>
+                </div>
+            </div>
+            <div class="tm-list-item">
+                <img src="img/diavola.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Diavola <span>$6.50</span></div>
+                    <div class="tm-list-item-description">Salame piccante, mozzarella e pomodoro.</div>
+                </div>
+            </div>
+            <div class="tm-list-item">
+                <img src="img/quattroformaggi.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Quattro Formaggi <span>$7.00</span></div>
+                    <div class="tm-list-item-description">Mozzarella, gorgonzola, taleggio e parmigiano.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="accordion-section">
+        <input type="checkbox" id="dolci">
+        <label for="dolci">Dolci</label>
+        <div class="accordion-content">
+            <div class="tm-list-item">
+                <img src="img/tiramisu.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Tiramisù <span>$4.50</span></div>
+                    <div class="tm-list-item-description">Classico dolce al caffè, morbido e cremoso.</div>
+                </div>
+            </div>
+            <div class="tm-list-item">
+                <img src="img/panna_cotta.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Panna Cotta <span>$4.00</span></div>
+                    <div class="tm-list-item-description">Dolce al cucchiaio con coulis di frutti di bosco.</div>
+                </div>
+            </div>
+            <div class="tm-list-item">
+                <img src="img/cannoli.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Cannoli Siciliani <span>$4.50</span></div>
+                    <div class="tm-list-item-description">Cialda croccante ripiena di crema di ricotta.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="accordion-section">
+        <input type="checkbox" id="bevande">
+        <label for="bevande">Bevande</label>
+        <div class="accordion-content">
+            <div class="tm-list-item">
+                <img src="img/caffè.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Caffè Espresso <span>$2.50</span></div>
+                    <div class="tm-list-item-description">Miscela arabica di qualità superiore.</div>
+                </div>
+            </div>
+            <div class="tm-list-item">
+                <img src="img/latte.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Latte Macchiato <span>$3.00</span></div>
+                    <div class="tm-list-item-description">Latte caldo con una spuma leggera.</div>
+                </div>
+            </div>
+            <div class="tm-list-item">
+                <img src="img/orangina.jpg" class="tm-list-img">
+                <div>
+                    <div class="tm-list-item-name">Aranciata <span>$2.50</span></div>
+                    <div class="tm-list-item-description">Bevanda frizzante all’arancia.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Creato da <strong>Pecoraro Vincenzo e Troiano Mirko</strong>
+    </footer>
+
+</body>
+</html>
